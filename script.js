@@ -18,6 +18,7 @@ let seminars = document.getElementById("seminars");
 home_button.addEventListener("click", function() {
     display_sections([home]);
     activate_buttons([])
+    set_title("Jan Matásek");
     history.pushState(null, null, "#home");
 }
 );
@@ -25,6 +26,7 @@ home_button.addEventListener("click", function() {
 bio_button.addEventListener("click", function() {
     display_sections([bio, no_bio]);
     activate_buttons([bio_button])
+    set_title("Biography | Jan Matásek");
     history.pushState(null, null, "#bio");
 }
 );
@@ -32,6 +34,7 @@ bio_button.addEventListener("click", function() {
 contact_button.addEventListener("click", function() {
     display_sections([contact]);
     activate_buttons([contact_button])
+    set_title("Contact | Jan Matásek");
     history.pushState(null, null, "#contact");
 }
 );
@@ -39,24 +42,28 @@ contact_button.addEventListener("click", function() {
 music_button.addEventListener("click", function() {
     display_sections([bio, music]);
     activate_buttons([bio_button, music_button])
+    set_title("Music | Jan Matásek");
     history.pushState(null, null, "#music");
 })
 
 theatre_button.addEventListener("click", function() {
     display_sections([bio, theatre]);
     activate_buttons([bio_button, theatre_button])
+    set_title("Theatre | Jan Matásek");
     history.pushState(null, null, "#theatre");
 })
 
 education_button.addEventListener("click", function() {
     display_sections([bio, education]);
     activate_buttons([bio_button, education_button])
+    set_title("Education | Jan Matásek");
     history.pushState(null, null, "#education");
 })
 
 seminars_button.addEventListener("click", function() {
     display_sections([bio, seminars]);
     activate_buttons([bio_button, seminars_button])
+    set_title("Seminars | Jan Matásek");
     history.pushState(null, null, "#seminars");
 })
 
@@ -119,3 +126,9 @@ function display_sections(sections) {
         }
     });
 }
+
+function set_title(title) {
+    document.title = title;
+}
+
+window.scrollY = 0; // scroll to top on page load

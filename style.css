@@ -4,20 +4,30 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
 }
 
-nav{
+.nav{
+    padding: 2rem;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 2rem;
     z-index: 1;
+    position: fixed;
+    background-color: black;
 }
 
 .bio_nav{
-    margin-top: 2rem;
+    padding-bottom: 2rem;;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
+    position: fixed;
+    background-color: black;
 }
 
 a{
@@ -76,28 +86,44 @@ h2{
 }
 
 .content_wrapper{
-    display: flex;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
+    padding-left: 2rem;
 }
 
 .content {
     width: 100%;
+    margin-top: 6rem;
 }
 
 .home_image{
     height: calc(100vh - 3rem);
     position:absolute;
     top: 3rem;
-    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.bio_image {
+    height: calc(100vh - 3rem);
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.bio_content{
+    padding-top: 4rem;
 }
 
 .contact_wrapper {
     display: flex;
     width: 100%;
     flex-wrap: wrap; /* důležité pro zalomení */
-    margin-top: 4rem;
     font-weight: 500;
+    margin-top: 2rem;
 }
 
 .contact_wrapper > div {
@@ -105,12 +131,27 @@ h2{
     box-sizing: border-box; /* pro jistotu, aby padding neovlivnil šířku */
 }
 
+.table_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.year_col{
+    width: 7rem;
+    min-width: 7rem;
+    max-width: 7rem;;
+}
+
 @media (max-width: 660px) {
     .line{
         display: none;
     }
 
-    nav {
+    .nav {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -124,7 +165,21 @@ h2{
     .contact_wrapper{
         flex-direction: column;
     }
+
     .contact_wrapper > div {
         width: 100%;
+    }
+
+    .bio_image{
+        opacity: 0.5;
+    }
+    nav {
+        gap: 0.5rem
+    }
+    .row{
+        flex-direction: column;
+    }
+    .year_col{
+        margin-top: 1rem;
     }
 }
