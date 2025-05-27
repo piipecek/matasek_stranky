@@ -16,25 +16,69 @@ nav{
     z-index: 1;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+p {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 3rem;
+}
+
 .line {
     width: 5rem;
     height: 3px;
     background-color: white;
 }
 
-button {
+.nav_button {
     background-color: transparent;
+    position: relative;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     font-family: 'Metropolis', sans-serif;
     font-weight: 500;
 }
 
-.content{
+.nav_button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    bottom: -3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav_button:hover::after,
+.nav_button.active::after {
+    width: 100%;
+}
+
+.content_wrapper{
     display: flex;
-    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.content {
+    width: 100%;
 }
 
 .home_image{
@@ -42,6 +86,19 @@ button {
     position:absolute;
     top: 3rem;
     right: 5%;
+}
+
+.contact_wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; /* důležité pro zalomení */
+    margin-top: 4rem;
+    font-weight: 500;
+}
+
+.contact_wrapper > div {
+    width: 50%;
+    box-sizing: border-box; /* pro jistotu, aby padding neovlivnil šířku */
 }
 
 @media (max-width: 660px) {
@@ -58,5 +115,12 @@ button {
         right: -20%;
         top: 6rem;
         height: calc(100vh - 6rem);
+    }
+
+    .contact_wrapper{
+        flex-direction: column;
+    }
+    .contact_wrapper > div {
+        width: 100%;
     }
 }

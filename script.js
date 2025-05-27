@@ -10,6 +10,8 @@ home_button.addEventListener("click", function() {
     home.style.display = "block";
     bio.style.display = "none";
     contact.style.display = "none";
+    bio_button.classList.remove("active");
+    contact_button.classList.remove("active");
     history.pushState(null, null, "#home");
 }
 );
@@ -18,6 +20,8 @@ bio_button.addEventListener("click", function() {
     home.style.display = "none";
     bio.style.display = "block";
     contact.style.display = "none";
+    bio_button.classList.add("active");
+    contact_button.classList.remove("active");
     history.pushState(null, null, "#bio");
 }
 );
@@ -26,23 +30,32 @@ contact_button.addEventListener("click", function() {
     home.style.display = "none";
     bio.style.display = "none";
     contact.style.display = "block";
+    contact_button.classList.add("active");
+    bio_button.classList.remove("active");
     history.pushState(null, null, "#contact");
 }
 );
 
 // makes back button work
 window.addEventListener("popstate", function(event) {
-    if (location.hash === "#home") {
-        home.style.display = "block";
+    showSectionFromHash();
+})
+
+// makes reload work
+function showSectionFromHash() {
+    if (location.hash === "#contact") {
+        home.style.display = "none";
         bio.style.display = "none";
-        contact.style.display = "none";
+        contact.style.display = "block";
     } else if (location.hash === "#bio") {
         home.style.display = "none";
         bio.style.display = "block";
         contact.style.display = "none";
-    } else if (location.hash === "#contact") {
-        home.style.display = "none";
+    } else {
+        home.style.display = "block";
         bio.style.display = "none";
-        contact.style.display = "block";
+        contact.style.display = "none";
     }
-})
+}
+
+window.addEventListener("DOMContentLoaded", showSectionFromHash);
