@@ -1,0 +1,62 @@
+body {
+    font-family: 'Metropolis', sans-serif; 
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
+}
+
+.line {
+    width: 5rem;
+    height: 3px;
+    background-color: white;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 500;
+}
+
+.content{
+    display: flex;
+    flex: 1;
+}
+
+.home_image{
+    height: calc(100vh - 3rem);
+    position:absolute;
+    top: 3rem;
+    right: 5%;
+}
+
+@media (max-width: 660px) {
+    .line{
+        display: none;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home_image{
+        right: -20%;
+        top: 6rem;
+        height: calc(100vh - 6rem);
+    }
+}
