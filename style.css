@@ -16,6 +16,10 @@ nav{
     z-index: 1;
 }
 
+.bio_nav{
+    margin-top: 2rem;
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -39,7 +43,7 @@ h2{
 
 .line {
     width: 5rem;
-    height: 3px;
+    height: 2px;
     background-color: white;
 }
 
@@ -59,8 +63,8 @@ h2{
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3px;
-    bottom: -3px;
+    height: 2px;
+    bottom: -2px;
     width: 0%;
     background-color: white;
     transition: width 0.3s ease;
