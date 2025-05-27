@@ -43,6 +43,7 @@ window.addEventListener("popstate", function(event) {
 
 // makes reload work
 function showSectionFromHash() {
+    window.scrollTo(0, 0);
     if (location.hash === "#contact") {
         home.style.display = "none";
         bio.style.display = "none";
