@@ -9,7 +9,8 @@ body {
 }
 
 .nav{
-    padding: 2rem;
+    padding-left: 2rem;
+    height: 4rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,7 +21,7 @@ body {
 }
 
 .bio_nav{
-    padding-bottom: 2rem;;
+    height: 4rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -93,7 +94,7 @@ h2{
 
 .content {
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .home_image{
@@ -121,14 +122,13 @@ h2{
 .contact_wrapper {
     display: flex;
     width: 100%;
-    flex-wrap: wrap; /* důležité pro zalomení */
+    flex-wrap: wrap;
     font-weight: 500;
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 
 .contact_wrapper > div {
     width: 50%;
-    box-sizing: border-box; /* pro jistotu, aby padding neovlivnil šířku */
 }
 
 .table_wrapper{
