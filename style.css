@@ -11,6 +11,7 @@ body {
 .nav{
     padding: 2rem;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -20,6 +21,7 @@ body {
 .bio_nav{
     padding-bottom: 2rem;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -86,16 +88,19 @@ h2{
 .nav_button:hover::after,
 .nav_button.active::after {
     width: 100%;
+    box-sizing: border-box;
 }
 
 .content_wrapper{
     width: 100%;
+    box-sizing: border-box;
     max-width: 1200px;
     padding-left: 2rem;
 }
 
 .content {
     width: 100%;
+    box-sizing: border-box;
 }
 
 .home_image{
@@ -119,6 +124,7 @@ h2{
 .contact_wrapper {
     display: flex;
     width: 100%;
+    box-sizing: border-box;
     flex-wrap: wrap;
     font-weight: 500;
 }
@@ -171,6 +177,7 @@ h2{
 
     .contact_wrapper > div {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .bio_image{
