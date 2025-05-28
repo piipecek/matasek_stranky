@@ -14,4 +14,4 @@ Josef Lát
 ##  Spuštění na Wedos
 
 1. přístupové údaje na FTP hledej buď uložené ve FileZile, nebo v mailu podle předmětu `Kopie kontaktního formuláře`
-2. 
+2. Push do `main` větve aktivuje github action, která to deployne
