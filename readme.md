@@ -16,7 +16,7 @@ Josef Lát
 1. přístupové údaje na FTP hledej buď uložené ve FileZile, nebo v mailu podle předmětu `Kopie kontaktního formuláře`
 2. Push do `main` větve aktivuje github action, která to deployne
 
-## Úpravy obsahu
+##  Úpravy obsahu
 
 - Pro založení nových stránek a nové struktury oslovit Josefa
 - Pro menší úpravy obsahu:
